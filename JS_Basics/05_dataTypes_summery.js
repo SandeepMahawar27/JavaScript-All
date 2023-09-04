@@ -33,8 +33,13 @@ const myFunction = () => {
     console.log("Hiii Sandy")
 }
 
-console.log(typeof outsideTemp);  // object
+// console.log(typeof outsideTemp);  // object
 
 // console.log(typeof myFunction);  //functions
 
-myFunction();  //Hii Sandy
+// myFunction();  //Hii Sandy
+
+
+
+
+
