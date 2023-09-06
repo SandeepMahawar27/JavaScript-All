@@ -57,7 +57,7 @@ const user = {
 }
 
 function handleObjects(anyObject){
-    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
+    // console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
 // handleObjects(user);
@@ -71,5 +71,21 @@ const myNewArray = [200,400,600,100]
 function returnSecondValue(getArray){
     return getArray[1]
 }
-console.log(returnSecondValue(myNewArray));
+// console.log(returnSecondValue(myNewArray));
 
+
+
+// +++++++++++++++++++++++ Interesting ++++++++++++++++++++++++++++
+
+
+console.log(addone(5));
+
+function addone(num){
+    return num + 1;
+}
+
+const addTwo = function(num){
+    return num + 2;
+}
+
+console.log(addTwo(5));
