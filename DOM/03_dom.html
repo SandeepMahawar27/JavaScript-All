@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code with sandeep</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+
+    
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.floor(Math.random() * 10 + 1)
+
+    div.setAttribute("title", "genreated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerHTML = "sandeep with Js"
+
+    const addText = document.createTextNode("sandeep with Js")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+    // console.log(addText);
+
+</script>
+</html>
