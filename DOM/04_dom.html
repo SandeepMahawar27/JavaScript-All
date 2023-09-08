@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with sandeep | JS(DOM)</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+     </ul>
+</body>
+
+<script>
+
+    // problem with this type of method and not use big data append because it is traverse all tree.
+    //  function addLanguage(langName) {
+    //    const li = document.createElement('li');
+    //    li.innerHTML = `${langName}`
+    //    document.querySelector('.language').
+    //    appendChild(li)
+    //  }
+    //  addLanguage("c++")
+    //  addLanguage("TypeScript")
+
+
+    // optimize mthod for append child
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('CPP')
+    addOptiLanguage('Typescript')
+
+
+    //method 1.) Edit values (method 1 but mostly use) and innerHTML for use small and lite projects.
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+ 
+    // method 2
+    // not deference of innerHTML and textContent
+    const newLi = document.createElement('li')
+    newLi.textContent = "Java"
+    // secondLang.replaceWith(newLi)
+
+    //edit 3(method)
+    const firstLang = document.querySelector("li:first-child")
+    // firstLang.outerHTML = "<li>Java</li>"
+
+    // Remove in html tags
+    const lastlang = document.querySelector("li:last-child")
+    // lastlang.remove()
+
+</script>
+</html>
