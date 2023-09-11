@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #414141; color: #fff;">
+    <h2>Beautiful Imges</h2>
+    <div>
+        <ul id="images">
+            <li><img src="https://images.pexels.com/photos/17959888/pexels-photo-17959888/free-photo-of-glacier-iceland-snow-wood.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="photoshop" width="200px" id="river"></li>
+            <li><img src="https://images.pexels.com/photos/17909077/pexels-photo-17909077/free-photo-of-close-up-of-a-hamerkop-bird.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                    alt="photoshop" width="200px" id="bird" onclick=""></li>
+            <li><img src="https://images.pexels.com/photos/17427379/pexels-photo-17427379/free-photo-of-a-pelican-by-a-sea.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="photoshop" width="200px" id="bird2"></li>
+            <li><img src="https://images.pexels.com/photos/17900125/pexels-photo-17900125/free-photo-of-scenic-view-of-a-seacoast.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="photoshop" width="200px" id="beach"></li>
+            <li><img src="https://images.pexels.com/photos/8367323/pexels-photo-8367323.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="photoshop" width="200px" id="butterfly"></li>
+            <li> <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // not use 
+    //   document.getElementById('bird').onclick = () => {
+    //     alert("bird clicked")
+    //   }
+
+          // attachEvent()
+          // jquery - on
+    
+          // In sb ke bare m pdhna h because Important for interviews
+    // type, timestamp, preventDefault 
+    // target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrkey, shiftkey, keycode
+    //bubbling(in this use false in addEventListener) and capturing(it is use for fist come self then print parent node and use of (true) )
+
+    // It is Bublling.....
+
+    document.getElementById('images').addEventListener('click', (e) => {
+        console.log('Clicked inside the ul');
+    }, false)
+
+    document.getElementById('bird').addEventListener('click', (e) => {
+        //   alert("bird clicked");
+        e.stopPropagation(); // this use of not print and not work event of parent node.....(important)
+        console.log('Bird Clicked');
+    }, false)
+
+
+    // It is Capturing......
+
+    // document.getElementById('images').addEventListener('click', (e) => {
+    //     console.log('Clicked inside the ul');
+    // }, true)
+
+    // document.getElementById('bird').addEventListener('click', (e) => {
+    //     //   alert("bird clicked");
+    //     e.stopPropagation(); // this use of not print and not work event of parent node.....(important)
+    //     console.log('Bird Clicked');
+    // }, true)
+
+    document.getElementById('google').addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation()
+        console.log("google clicked");
+    }, false)
+
+
+
+    
+</script>
+
+</html>
