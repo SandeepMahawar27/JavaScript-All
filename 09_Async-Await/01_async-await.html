@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async await</title>
+</head>
+<body>
+     <h1>Hiiii Sandy</h1>
+     <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    const saySandeep = () => {
+        console.log("sandeep");
+    }
+    const changeText = () => {
+        document.querySelector('h1').
+        innerHTML = "best for js"
+    }
+
+   const changeMe = setTimeout(changeText, 2000)
+
+   document.querySelector("#stop").
+   addEventListener('click', () => {
+     clearTimeout(changeMe)
+     console.log("STOPED");
+   })
+
+    // clearTimeout(changeMe)
+
+    // very important example for async
+    // console.log("1");
+    // setTimeout( () => {
+    //     console.log("2");
+    // }, 0)
+    // console.log("3");
+</script>
+</html>
